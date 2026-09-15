@@ -67,7 +67,7 @@ export default function CommunityPage() {
             dedicated space. Reach out and I&rsquo;ll add you personally.
           </p>
         </div>
-        <Button href="/auth">Join the community</Button>
+        <Button href="https://chat.whatsapp.com/JpkoyRQKdfi36GxZAFKu6H">Join the community</Button>
       </div>
     </div>
   );
