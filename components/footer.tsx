@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteLinks } from "@/lib/site-links";
 
 const columns = [
   {
@@ -19,20 +20,23 @@ const columns = [
   },
 ];
 
-const socials = [
-  { href: "https://tiktok.com/@ifeanyiadebowale", label: "TikTok" },
-  { href: "https://youtube.com/@ifeanyiadebowale", label: "YouTube" },
-  { href: "https://linkedin.com/in/ifeanyiadebowale", label: "LinkedIn" },
-  { href: "https://x.com/ifeanyadebowale", label: "X" },
+const externalLinks = [
+  { href: siteLinks.selar, label: "Selar Store" },
+  { href: siteLinks.blog, label: "DPN Blog" },
+  { href: siteLinks.tiktok, label: "TikTok" },
+  { href: siteLinks.youtube, label: "YouTube" },
+  { href: siteLinks.linkedin, label: "LinkedIn" },
+  { href: siteLinks.x, label: "X" },
+  { href: siteLinks.substack, label: "Substack" },
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-ink text-paper">
-      <div className="container grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
+    <footer className="border-t border-black/10 bg-white text-black">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
         <div>
           <p className="font-display text-lg font-semibold">ADE</p>
-          <p className="mt-3 max-w-xs text-sm text-paper/60">
+          <p className="mt-3 max-w-xs text-sm leading-6 text-black/60">
             Building Digital Pulse Networks in public — practical AI, digital
             skills and business lessons for people starting from scratch.
           </p>
@@ -40,13 +44,13 @@ export function Footer() {
 
         {columns.map((col) => (
           <div key={col.title}>
-            <p className="text-sm font-medium text-paper/50">{col.title}</p>
+            <p className="text-sm font-medium text-black/50">{col.title}</p>
             <ul className="mt-4 space-y-3">
               {col.links.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-paper/80 hover:text-paper"
+                    className="text-sm text-black/80 hover:text-black"
                   >
                     {link.label}
                   </Link>
@@ -57,17 +61,17 @@ export function Footer() {
         ))}
 
         <div>
-          <p className="text-sm font-medium text-paper/50">Follow</p>
+          <p className="text-sm font-medium text-black/50">My links</p>
           <ul className="mt-4 space-y-3">
-            {socials.map((s) => (
-              <li key={s.label}>
+            {externalLinks.map((link) => (
+              <li key={link.href}>
                 <a
-                  href={s.href}
+                  href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-paper/80 hover:text-paper"
+                  className="text-sm text-black/80 hover:text-black"
                 >
-                  {s.label}
+                  {link.label}
                 </a>
               </li>
             ))}
@@ -75,9 +79,11 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-paper/10">
-        <div className="container flex flex-col gap-2 py-6 text-xs text-paper/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Digital Pulse Networks. Built by ADE.</p>
+      <div className="border-t border-black/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-black/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} Digital Pulse Networks. Built by ADE.
+          </p>
           <p>Lagos, Nigeria — building for a global audience.</p>
         </div>
       </div>

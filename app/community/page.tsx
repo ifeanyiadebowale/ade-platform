@@ -67,7 +67,7 @@ export default function CommunityPage() {
             dedicated space. Reach out and I&rsquo;ll add you personally.
           </p>
         </div>
-        <Button href="/contact">Request to join</Button>
+        <Button href="/auth">Join the community</Button>
       </div>
     </div>
   );
