@@ -185,24 +185,9 @@ export default function HomePage() {
             </p>
           </div>
           <div>
-            <form className="flex flex-col gap-3 sm:flex-row">
-              <label htmlFor="hero-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="hero-email"
-                type="email"
-                required
-                placeholder="you@example.com"
-                className="w-full rounded-full border border-paper/20 bg-paper/5 px-5 py-3 text-sm text-paper placeholder:text-paper/40 focus-visible:border-paper/60 focus-visible:outline-none"
-              />
-              <Button variant="secondary" className="border-paper text-paper hover:bg-paper hover:text-ink shrink-0">
-                Subscribe
-              </Button>
-            </form>
+            <div className="ml-embedded" data-form="1J1IPR"></div>
             <p className="mt-3 text-xs text-paper/40">
-              Free, weekly, unsubscribe anytime. Sign-up isn&rsquo;t
-              connected yet — this is a preview of the first version.
+    
             </p>
           </div>
         </div>
