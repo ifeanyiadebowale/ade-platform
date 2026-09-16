@@ -30,7 +30,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="flex min-h-screen flex-col font-sans">
+      <body className="flex min-h-screen flex-col font-sans"><Script
+  src="https://assets.mailerlite.com/js/universal.js"
+  strategy="afterInteractive"
+/><Script id="mailerlite-account" strategy="afterInteractive">
+  {`ml('account', '2636187');`}
+</Script>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
@@ -38,3 +43,5 @@ export default function RootLayout({
     </html>
   );
 }
+import Script from "next/script"
+
